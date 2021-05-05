@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assignment_notices",
+  "info": {
+    "name": "CourseNotices",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "course": {
+      "model": "course",
+      "via": "assignment_notices"
+    },
+    "title": {
+      "type": "string"
+    },
+    "descrption": {
+      "type": "richtext"
+    },
+    "date": {
+      "type": "datetime"
+    }
+  }
+}

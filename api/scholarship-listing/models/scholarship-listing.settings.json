@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scholarship_listings",
+  "info": {
+    "name": "ScholarshipListing"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "posted_by": {
+      "via": "scholarship_listings",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
+    },
+    "scholarship_applications": {
+      "via": "scholarship_listing",
+      "collection": "scholarship-application"
+    }
+  }
+}

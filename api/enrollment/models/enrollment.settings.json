@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enrollments",
+  "info": {
+    "name": "Enrollment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clientName": {
+      "type": "string"
+    },
+    "clientEmail": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "reason": {
+      "type": "enumeration",
+      "enum": [
+        "a_level",
+        "o_level",
+        "scholarship"
+      ]
+    },
+    "student_ids": {
+      "via": "enrollments",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

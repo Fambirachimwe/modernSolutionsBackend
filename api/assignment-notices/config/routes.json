@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/assignment-notices",
+      "handler": "assignment-notices.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/assignment-notices/count",
+      "handler": "assignment-notices.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/assignment-notices/:id",
+      "handler": "assignment-notices.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/assignment-notices",
+      "handler": "assignment-notices.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/assignment-notices/:id",
+      "handler": "assignment-notices.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/assignment-notices/:id",
+      "handler": "assignment-notices.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

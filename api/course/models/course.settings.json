@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Course"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "documents": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "assignments": {
+      "via": "course",
+      "collection": "assignment"
+    },
+    "user": {
+      "via": "teacher_courses",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "assignment_notices": {
+      "via": "course",
+      "collection": "assignment-notices"
+    },
+    "students_enrolleds": {
+      "via": "courses_enrolleds",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newzs",
+  "info": {
+    "name": "Newz"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "datetime"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "approved": {
+      "type": "boolean"
+    }
+  }
+}

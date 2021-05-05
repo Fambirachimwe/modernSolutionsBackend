@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scholarship_applications",
+  "info": {
+    "name": "ScholarshipApplication"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student_ids": {
+      "via": "scholarship_applications",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "dateApplied": {
+      "type": "datetime"
+    },
+    "scholarship_listing": {
+      "model": "scholarship-listing",
+      "via": "scholarship_applications"
+    }
+  }
+}
